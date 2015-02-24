@@ -1,0 +1,43 @@
+.upgradesForm {
+  margin-left: 5%;
+  margin-top: 1%;
+  width: 30em;
+}
+
+.upgradesForm legend {
+  font-size: 1.2em;
+}
+
+.pure-button.save {
+  margin-left: 5%;
+  margin-top: .5em;
+}
+
+.addUpgrade {
+  float: right;
+}
+
+.deleteUpgrade {
+  float: right;
+}
+
+.totalLabel {
+  font-size: 1.2em;
+}
+
+.total {
+  margin-left: 10%;
+  font-size: 1.1em;
+}
+
+.upgradesForm input[type=text] {
+  width: 60%;
+}
+
+.upgradesForm input[type=number] {
+  width: 20%;
+}
+
+.listUpgrades {
+  display: block;
+}
