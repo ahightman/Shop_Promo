@@ -1,0 +1,41 @@
+
+      <div class="promo-form-wrapper">
+        <form ng-submit="vm.promo.addUpgrade()">
+          <fieldset>
+              <label for="year">Year</label>
+                <input id="year" ng-model="vm.promo.year">
+              <label for="make">Make</label>
+                <input id="make" ng-model="vm.promo.make">
+              <label for="model">Model</label>
+                <input id="model" ng-model="vm.promo.model">
+              <label for="mileage">Mileage</label>
+                <input id="mileage" ng-model="vm.promo.mileage">
+              <label for="style">Style</label>
+                <input id="style" ng-model="vm.promo.style">
+              <label for="trans">Transmission</label>
+                <input id="trans" ng-model="vm.promo.trans">
+              <label for="extcolor">Exterior Color</label>
+                <input id="extcolor" ng-model="vm.promo.extcolor">
+              <label for="intcolor">Interior Color</label>
+                <input id="intcolor" ng-model="vm.promo.intcolor">
+              <label for="price">Price</label>
+                <input id="price" type="number" ng-model="vm.promo.price">
+          </fieldset>
+
+          <div class="upgradesForm">
+            <legend>Available Upgrades</legend>
+            <fieldset ng-repeat="upgrade in vm.promo.upgrades">
+              <input type="text" ng-model="upgrade.description" placeholder="Description">
+              <input type="number" ng-model="upgrade.cost" step="any" placeholder="Cost">
+              <button type="button" class="deleteUpgrade" ng-click="promo.deleteUpgrade(upgrade)">x</button>
+            </fieldset>
+            <fieldset>
+              <span class="totalLabel">Total</span>
+              <span class="total">{{vm.promo.total | currency}}</span>
+              <button class="addUpgrade" ng-click="vm.addUpgrade()">+</button>
+            </fieldset>
+          </div>
+        </form>
+        <button ng-click="vm.doneEditing()">Save</button>
+        <button ng-click="vm.cancelEditing()">Save</button>
+      </div>

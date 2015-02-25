@@ -1,0 +1,24 @@
+
+        <ul ng-repeat="promo in promos.all">
+          <h1 ng-click="vm.editPromo(vehicle)">{{promo.year}} {{promo.make}} {{promo.model}}</h1>
+            <li>{{promo.mileage}}</li>
+            <li>{{promo.style}}</li>
+            <li>{{promo.trans}}</li>
+            <li>{{promo.extcolor}}</li>
+            <li>{{promo.intcolor}}</li>
+            <li>{{promo.price | currency}}</li>
+
+            <table>
+              <tr ng-repeat="upgrade in vehicle.upgrades">
+                <td>{{upgrade.description}}</td>
+                <td>{{upgrade.cost | currency}}</td>
+              </tr>
+            </table>
+
+          <h2>{{vehicle.total | currency}}</h2>
+
+          <button class="deletePromo" ng-click="promos.removePromo(vehicle)">X</button>
+
+        </ul>
+
+        <button ng-click="promos.createPromo()">+ New Promo</button>
